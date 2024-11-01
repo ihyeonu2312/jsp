@@ -162,7 +162,11 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
+<<<<<<< HEAD
       <Context docBase="C:\Users\tj\eclipse-workspace\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\tj\eclipse-workspace\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_servlet" path="/01_servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet"/><Context docBase="C:\Users\tj\eclipse-workspace\jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\member_post" path="/member_post" reloadable="true" source="org.eclipse.jst.jee.server:member_post"/></Host>
+=======
+      <Context docBase="C:\Users\이현우\eclipse-workspace-jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\이현우\eclipse-workspace-jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_servlet" path="/01_servlet" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet"/><Context docBase="C:\Users\이현우\eclipse-workspace-jsp\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\01_servlet_jsp" path="/01_servlet_jsp" reloadable="true" source="org.eclipse.jst.jee.server:01_servlet_jsp"/></Host>
+>>>>>>> 279d7ba9f8a8adcc944bf3350ab925ad7f334289
     </Engine>
   </Service>
 </Server>
