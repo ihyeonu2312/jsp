@@ -36,13 +36,11 @@ public class Signin extends HttpServlet{
         	// 로그인 성공
         	HttpSession session = req.getSession();
         	session.setAttribute("member", service.findBy(id));
-        	resp.sendRedirect(req.getContextPath()+"/");
+        	resp.sendRedirect(req.getContextPath()+"/index");
         }
         	// 로그인 실패
         else {
         	resp.sendRedirect("login?msg=fail");
-        	
         }
-        
     }
 }
