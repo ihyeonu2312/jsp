@@ -15,7 +15,7 @@
                  <input type="password" class="form-control my-2" id="pw" placeholder="비밀번호" name="pw">
                  <input type="text" class="form-control my-2" id="name" placeholder="이름" name="name">
                  <input type="email" class="form-control my-2" id="email" placeholder="이메일" name="email">
-                 <input type="text" class="form-control my-2" id="roadAddr" placeholder="" name="roadAddr" readonly>
+                 <input type="text" class="form-control my-2" id="roadAddr" placeholder="도로명주소" name="roadAddr" readonly>
                  <input type="text" class="form-control my-3" id="detailAddr" placeholder="상세주소" name="detailAddr">
                  <div class="input-group my-2">
                     <input type="text" class="form-control" id="email" placeholder="도로명검색" name="email">
@@ -37,7 +37,7 @@
 
             const data =  {
                 keyword,
-                confmKey : 'devU01TX0FVVEgyMDI0MTAyOTEyMTYxNTExNTE5OTg=',
+                confmKey : 'devU01TX0FVVEgyMDI0MTEwNjE1MjQxNzExNTIxNjQ=',
                 currentPage : 1,
                 currentPage : 100,
                 resultType : 'json'

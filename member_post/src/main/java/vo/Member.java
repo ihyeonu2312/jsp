@@ -73,5 +73,8 @@ public class Member {
         }
 
     }
+    	public int getNum() {
+    		return 10;
+    	}
 
 }
