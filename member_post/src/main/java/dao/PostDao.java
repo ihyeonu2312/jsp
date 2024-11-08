@@ -91,6 +91,7 @@ public class PostDao {
 		}
  		return posts;
 	}
+	
 	public int update(Post post) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -118,6 +119,33 @@ public class PostDao {
 				
 				return 0;
 		}
+	
+	public int increaseViewCount(Long pno) {
+		Connection conn = null;
+		
+		PreparedStatement pstmt = null;
+				try {
+					String sql = "update tbl_post set view_count = view_count + 1 where pno = ?";
+					conn = DBConn.getConnection();
+					pstmt = conn.prepareStatement(sql);
+	
+					int idx = 1;
+					
+					pstmt.setLong(idx++, pno);
+					return pstmt.executeUpdate();
+	
+				} catch (SQLException | ClassNotFoundException e) {
+					e.printStackTrace();
+				} finally {
+					try {
+						pstmt.close();
+						conn.close();
+					} catch (SQLException ignore) { }
+				}
+				
+				return 0;
+		}
+	
 	public int delete(Long pno) {
 		Connection conn = null;
 				
@@ -152,21 +180,21 @@ public class PostDao {
 //		for(int i = 0 ; i < 10 ; i++) {
 //			dao.insert(Post.builder().writer("abcd").title("제목 + " + (i + 1)).content("내용").build());
 //		}
-//		dao.selectList().forEach(System.out::println);
-//		System.out.println(dao.selectOne(1L));
-//		System.out.println(dao.delete(L)); //삭제
+		dao.selectList().forEach(System.out::println);
+		System.out.println(dao.selectOne(3L));
+//		System.out.println(dao.delete(46L)); //삭제
 		
-		Post post = dao.selectOne(3L); // 수정
-		
-		System.out.println(post);
-		
-		post = Post.builder().pno(post.getPno()).title("수정된 제목").content("수정된 내용").build();
-		
-		dao.update(post);
-		
-		post = dao.selectOne(3L);
-		
-		System.out.println(post);
+//		Post post = dao.selectOne(3L); // 수정
+//		
+//		System.out.println(post);
+//		
+//		post = Post.builder().pno(post.getPno()).title("수정된 제목").content("수정된 내용").build();
+//		
+//		dao.update(post);
+//		
+//		post = dao.selectOne(3L);
+//		
+//		System.out.println(post);
 	}
 	
 }

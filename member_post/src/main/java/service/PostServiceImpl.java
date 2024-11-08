@@ -1,10 +1,8 @@
 package service;
 
 import java.util.List;
-
 import dao.PostDao;
 import vo.Post;
-
 public class PostServiceImpl implements PostService {
 	private PostDao dao = new PostDao();
 	
@@ -36,6 +34,12 @@ public class PostServiceImpl implements PostService {
 	public List<Post> list() {
 		// TODO Auto-generated method stub
 		return dao.selectList();
+	}
+
+	@Override
+	public Post view(Long pno) {
+		dao.increaseViewCount(pno);
+		return findBy(pno);
 	}
 
 }

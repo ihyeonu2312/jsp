@@ -13,9 +13,9 @@ public interface PostService {
 	int remove(Long pno);
 	
 	Post findBy(Long pno);
+
+	Post view(Long pno);
 	
 	List<Post> list();
-	
-	
 	
 }
