@@ -12,8 +12,9 @@
        	    <div class="clearfix py-3 mt-3">
 	            <h2 class="float-start">Post Write</h2>
             </div>
+            ${cri.qs}
 	      		<div class="my-3 col-md-9 mx-auto">
-		      		<form method="post">
+		      		<form method="post" action="write?page=1&${cri.qs}">
 	    	            <label for="title" class="form-label mt-3"><i class="fa-solid fa-heading text-primary mx-2"></i><b>Title</b></label>
 	        	        <input type="text" class="form-control" id="title" placeholder="title" name="title"  >
 	            	   
@@ -26,7 +27,7 @@
 	
 	      	        	<div class="text-center my-5">	
 	                		<button class="btn btn-primary">작성</button>
-	                   		<a href="list" class="btn">목록</a>
+	                   		<a href="list?${cri.qs2}"  class="btn">목록</a>
 	              		</div>
 					</form>
 	            </div>

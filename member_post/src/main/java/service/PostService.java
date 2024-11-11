@@ -2,6 +2,7 @@ package service;
 
 import java.util.List;
 
+import dto.Criteria;
 import vo.Post;
 
 public interface PostService {
@@ -16,6 +17,8 @@ public interface PostService {
 
 	Post view(Long pno);
 	
-	List<Post> list();
+	List<Post> list(Criteria cri);
+	
+	int count(Criteria cri);
 	
 }
