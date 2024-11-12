@@ -1,54 +1,71 @@
 package service;
 
 import java.util.List;
-import dao.PostDao;
+
+import org.apache.ibatis.session.SqlSession;
+
 import dto.Criteria;
+import mapper.MemberMapper;
+import mapper.PostMapper;
+import utils.MybatisInit;
 import vo.Post;
+
 public class PostServiceImpl implements PostService {
-	private PostDao dao = new PostDao();
-	
+
 	@Override
 	public int write(Post post) {
-		// TODO Auto-generated method stub
-		return dao.insert(post);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.insert(post);
+		}
 	}
 
 	@Override
 	public int modify(Post post) {
-		// TODO Auto-generated method stub
-		return dao.update(post);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.update(post);
+		}
 	}
 
 	@Override
 	public int remove(Long pno) {
-		// TODO Auto-generated method stub
-		return dao.delete(pno);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.delete(pno);
+		}
 	}
 
 	@Override
 	public Post findBy(Long pno) {
-		// TODO Auto-generated method stub
-		return dao.selectOne(pno);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.selectOne(pno);
+		}
 	}
 
 	@Override
 	public List<Post> list(Criteria cri) {
-		// TODO Auto-generated method stub
-		return dao.selectList(cri);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.selectList(cri);
+		}
 	}
 
 	@Override
 	public int count(Criteria cri) {
-		// TODO Auto-generated method stub
-		return dao.getCount(cri);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			return mapper.getCount(cri);
+		}
 	}
-	
-	
 
 	@Override
 	public Post view(Long pno) {
-		dao.increaseViewCount(pno);
-		return findBy(pno);
+		try (SqlSession session = MybatisInit.getInstance().sqlSessionFactory().openSession(true)) {
+			PostMapper mapper = session.getMapper(PostMapper.class);
+			mapper.increaseViewCount(pno);
+			return mapper.selectOne(pno);
+		}
 	}
-
 }

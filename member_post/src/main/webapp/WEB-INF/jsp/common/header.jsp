@@ -6,7 +6,7 @@
                 <h1 class="text-center fw-bold p-3">더조은 아카데미 UI 구현 게시판 레이아웃</h1>
             </div>
         </header>
-        <nav class="navbar bg-dark navbar-expand-sm">
+        <nav class="navbar bg-dark navbar-expand-sm mb-3">
             <ul class="navbar-nav container justify-content-start">
                 <li class="mx-3 nav-item"><a class="nav-link text-white" href="${cp}index">메인페이지</a></li>
                 <li class="mx-3 nav-item"><a class="nav-link text-white" href="${cp}mypage">마이페이지</a></li>
