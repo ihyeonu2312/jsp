@@ -8,9 +8,11 @@ import dto.Criteria;
 import vo.Post;
 
 public interface PostMapper {
-	int insert(Post post);
+	Long insert(Post post);
 
 	Post selectOne(Long pno);
+
+	int getCount(Criteria cri);
 
 	List<Post> selectList(Criteria cri);
 
@@ -20,7 +22,6 @@ public interface PostMapper {
 
 	int delete(Long pno);
 
-	int getCount(Criteria cri);
 
 
 }
