@@ -31,7 +31,17 @@ public class ReplyController extends HttpServlet{
 			int tmpIdx = uri.lastIndexOf("/");
 			Long pno = 0L;
 			if(tmpIdx != -1) {
+				String tmp = uri.substring(tmpIdx + 1);
+				String[] tmpArr = tmp.split("/");
+				switch (tmpArr.length) {
+				case 0: {
+					break;
+				}
+				default:
+					break;
+				}
 				pno = Long.valueOf(uri.substring(tmpIdx + 1)); 
+				
 			}
 			ret = service.list(pno);
 		}
@@ -51,14 +61,7 @@ public class ReplyController extends HttpServlet{
 
 	@Override
 	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		char[] chs = new char[req.getContentLength()];
-		req.getReader().read(chs);
-		String str = new String(chs);
-
-//		JsonNode node = mapper.readTree(str);
-//        System.out.println(node);
-
-		Reply reply = gson.fromJson(str, Reply.class);
+		Reply reply = gson.fromJson(req.getReader(), Reply.class);
 		service.modify(reply);
 		
 	}

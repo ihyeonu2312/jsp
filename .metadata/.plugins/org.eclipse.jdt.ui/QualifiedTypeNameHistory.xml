@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
     <fullyQualifiedTypeName name="dto.PageDto"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
@@ -49,9 +47,7 @@
     <fullyQualifiedTypeName name="lombok.Data"/>
     <fullyQualifiedTypeName name="lombok.Builder"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
-    <fullyQualifiedTypeName name="vo.Reply"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.AccessLevel"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="mapper.ReplyMapper"/>
@@ -60,4 +56,8 @@
     <fullyQualifiedTypeName name="servlet.reply.ReplyController"/>
     <fullyQualifiedTypeName name="service.ReplyService"/>
     <fullyQualifiedTypeName name="service.ReplyServiceImpl"/>
+    <fullyQualifiedTypeName name="vo.Reply"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="com.google.gson.Gson"/>
+    <fullyQualifiedTypeName name="com.google.gson.GsonBuilder"/>
 </qualifiedTypeNameHistroy>
