@@ -57,7 +57,7 @@
 				<div class="clearfix mt-5 mb-2">
                 	<label class="form-label float-start"><i class="fa-regular fa-comment-dots text-primary"></i> <b>My Reply</b><br></label>
                 </div>
-                <ul class="list-group small my-replies my-2" data-bs-theme="dark">
+                <ul class="list-group small my-replies my-2" data-bs-theme="light">
                     <li class="list-group-item" data-rno="38">
                         <p class="fw-bold mt-3 text-truncate">haha</p>
                         <div class="clearfix">
